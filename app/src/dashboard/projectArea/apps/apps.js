@@ -30,7 +30,7 @@ class Apps extends Component {
                     <App />
                 </div>
                 <div className="column is-2">
-                    <h1>Add more</h1>
+                    <h1 className="has-text-danger title">Add more</h1>
                 </div>
             </div>
         );

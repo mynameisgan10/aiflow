@@ -7,21 +7,21 @@ const Navbar = props => {
             <div className="columns">
                 <div className="column is-12">
                     <nav className="level navbar has-text-centered">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <p class="subtitle is-5">
-                                    <strong>AIFlow</strong>
+                        <div className="level-left">
+                            <div className="level-item">
+                                <p className="subtitle is-5">
+                                    <strong className="has-text-danger">AIFlow</strong>
                                 </p>
                             </div>
-                            <div class="level-item">
-                                <div class="field has-addons">
-                                    <p class="control">
-                                        <input class="input" type="text" placeholder="Find a post" />
+                            <div className="level-item">
+                                <div className="field has-addons">
+                                    <p className="control">
+                                        <input className="input" type="text" placeholder="Find an app" />
                                     </p>
-                                    <p class="control">
-                                        <button class="button">
+                                    <p className="control">
+                                        <button className="button has-text-link">
                                             Search
-                                </button>
+                                        </button>
                                     </p>
                                 </div>
                             </div>
