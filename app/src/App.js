@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Dashboard from './dashboard/dashboard';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="columns">
-        <Dashboard />
-      </div>
-      
+      <BrowserRouter>
+        <div className="columns">
+          <Dashboard />
+        </div>
+      </BrowserRouter>
     );
   }
 }
