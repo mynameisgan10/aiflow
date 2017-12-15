@@ -1,0 +1,22 @@
+{
+  "name": "aiflow",
+  "version": "1.0.0",
+  "description": "Using Artificial Intelligence to create mobile applications, while utilizing cloud computing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mynameisgan10/aiflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mynameisgan10/aiflow/issues"
+  },
+  "homepage": "https://github.com/mynameisgan10/aiflow#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
