@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './navbar/navbar'
 import ProjectArea from './projectArea/projectArea';
 import AppDetail from '../components/AppDetail/AppDetail';
+import NewApp from '../components/NewApp/NewApp';
 import { Route } from 'react-router-dom';
 import Aux from '../HOC/aux/aux'
 class Dashboard extends Component {
@@ -15,10 +16,11 @@ class Dashboard extends Component {
     }
     render() {
         return (
-            <div className="column is-12 has-text-centered">
+            <div className="column is-12">
                 <Navbar />
                 <Route path="/" exact component={ProjectArea}></Route>
                 <Route path="/test" exact component={AppDetail}></Route>
+                <Route path="/new" exact component={NewApp}></Route>
             </div>
         );
     }

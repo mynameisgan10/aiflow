@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Navbar = props => {
@@ -10,7 +11,7 @@ const Navbar = props => {
                         <div className="level-left">
                             <div className="level-item">
                                 <p className="subtitle is-5">
-                                    <strong className="has-text-danger">AIFlow</strong>
+                                    <Link to='/'><strong className="has-text-danger">AIFlow</strong></Link>
                                 </p>
                             </div>
                             <div className="level-item">
@@ -27,11 +28,11 @@ const Navbar = props => {
                             </div>
                         </div>
                         <div className="level-right">
-                            <p className="level-item"><strong>All</strong></p>
-                            <p className="level-item"><a>Published</a></p>
-                            <p className="level-item"><a>Drafts</a></p>
-                            <p className="level-item"><a>Deleted</a></p>
-                            <p className="level-item"><a className="button is-success">New</a></p>
+                            <p className="level-item"><NavLink to="/" exact activeClassName="has-text-weight-bold">All</NavLink></p>
+                            <p className="level-item"><NavLink to="/published" exact activeClassName="has-text-weight-bold">Published</NavLink></p>
+                            <p className="level-item"><NavLink to="/drafts" exact activeClassName="has-text-weight-bold">Drafts</NavLink></p>
+                            <p className="level-item"><NavLink to="/deleted" exact activeClassName="has-text-weight-bold">Deleted</NavLink></p>
+                            <p className="level-item"><NavLink to="/new" exact activeClassName="has-text-weight-bold"><p className="button is-success">New</p></NavLink></p>
                         </div>
                     </nav>
                 </div>
