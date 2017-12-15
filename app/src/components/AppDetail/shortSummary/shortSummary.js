@@ -6,7 +6,7 @@ const ShortSummary = (props) => {
         <section className="hero is-fullheight is-default is-bold is-centered" onClick={props.clicked}>
             <div className="hero-head">
                 <nav className="navbar">
-                    <div className="container">
+                    <div className="container is-fluid">
                         <div className="navbar-brand">
                             <a className="navbar-item" href="../">
                                 <img src="../images/bulma.png" alt="Logo" />
