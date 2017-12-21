@@ -1,0 +1,32 @@
+.ChatArea{
+    height:650px;
+    width:100%;
+}
+.text-bubble-container{
+display:flex;
+flex-direction: column;
+max-width:100%;
+
+}
+.text-bubble-container-right{
+align-items: flex-end;
+}
+.text-bubble-container-left{
+align-items: flex-start;
+}
+.talk-bubble{
+height:auto;
+margin:  10px 20px;
+max-width:30%;
+padding: 10px;
+background-color: hsl(141, 71%, 48%);
+border-radius: 25px;
+}
+.align-text-right{
+text-align: right;
+}
+.align-text-left{
+text-align: left;
+}
+
+
