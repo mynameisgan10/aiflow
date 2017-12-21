@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './navbar/navbar'
-import ProjectArea from './projectArea/projectArea';
-import AppDetail from '../components/AppDetail/AppDetail';
-import NewApp from '../components/NewApp/NewApp';
+import ProjectArea from '../../containers/projectArea/projectArea';
+import AppDetail from '../../containers/AppDetail/AppDetail'
+import NewApp from '../../containers/NewApp/NewApp';
+import NavBar from '../Navbar/Navbar';
 import { Route } from 'react-router-dom';
-import Aux from '../HOC/aux/aux'
-class Dashboard extends Component {
+class Layout extends Component {
     state = {
         showModal: true
     }
@@ -17,7 +16,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="column is-12">
-                <Navbar />
+                <NavBar />
                 <Route path="/" exact component={ProjectArea}></Route>
                 <Route path="/test" exact component={AppDetail}></Route>
                 <Route path="/new" exact component={NewApp}></Route>
@@ -26,4 +25,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default Layout;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dashboard from './dashboard/dashboard';
+import Layout from './components/Layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="columns">
-          <Dashboard />
+          <Layout />
         </div>
       </BrowserRouter>
     );
