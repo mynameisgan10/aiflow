@@ -3,7 +3,7 @@ import ProjectArea from '../../containers/projectArea/projectArea';
 import AppDetail from '../../containers/AppDetail/AppDetail'
 import NewApp from '../../containers/NewApp/NewApp';
 import NavBar from '../Navbar/Navbar';
-import { Route } from 'react-router-dom';
+import { Route, Switch,Redirect } from 'react-router-dom';
 class Layout extends Component {
     state = {
         showModal: true
@@ -17,9 +17,12 @@ class Layout extends Component {
         return (
             <div className="column is-12">
                 <NavBar />
-                <Route path="/" exact component={ProjectArea}></Route>
-                <Route path="/test" exact component={AppDetail}></Route>
-                <Route path="/new" exact component={NewApp}></Route>
+                <Switch>
+                    <Route path="/" exact component={ProjectArea}></Route>
+                    <Route path="/appdetail" exact component={AppDetail}></Route>
+                    <Route path="/new" exact component={NewApp}></Route>
+                    <Route path="*" render={() =><Redirect to="/"/>}/>
+                </Switch>
             </div>
         );
     }

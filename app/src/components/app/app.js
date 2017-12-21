@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const App = (props) => {
     return (
-        <Link to="/test">
+        <Link to="/appdetail">
             <div className="card" onClick={props.onClick}>
                 <div className="card-image">
                     <figure className="image is-4by3">
