@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "push": "cd ../ && git add ."
+    "push": "cd ../ && git add .",
+    "server": "cd ../ && node server"
   },
   "devDependencies": {
     "bulma": "^0.6.1"
