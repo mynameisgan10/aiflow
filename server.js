@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const auth = require('./routes/auth');
 const app = express();
 
 
@@ -23,9 +24,11 @@ mongoose.connection.on('error', (err) => {
 
 const port = 4700;
 
-
 //setting build file path
 app.use(express.static(path.join(__dirname, "app/build")));
+
+//setting up routes
+app.use('/test',auth);
 
 //redirecting other links back to index.html
 app.get('*', (req, res) => {

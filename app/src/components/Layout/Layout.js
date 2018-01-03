@@ -4,11 +4,15 @@ import AppDetail from '../../containers/AppDetail/AppDetail'
 import NewApp from '../../containers/NewApp/NewApp';
 import NavBar from '../Navbar/Navbar';
 import { Route, Switch,Redirect } from 'react-router-dom';
+import Axios from 'axios';
 
 class Layout extends Component {
     state = {
         showModal: true,
         isLoggedIn: true
+    }
+    componentDidUpdate(){
+        Axios.get("/test");
     }
     appClick = () => {
         this.setState({
