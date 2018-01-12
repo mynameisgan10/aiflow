@@ -62,3 +62,5 @@ class NewApp extends Component {
 }
 
 export default NewApp;
+
+// need to reset state after revisit the page

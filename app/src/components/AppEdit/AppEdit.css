@@ -1,0 +1,18 @@
+.AppEdit-add-item {
+    color:hsl(217, 71%, 53%)
+}
+.AppEdit-add-text {
+    color: hsl(141, 71%, 48%);
+}
+.AppEdit-add-image {
+    color: hsl(0, 0%, 21%);
+}
+.AppEdit-link-page {
+    color: hsl(348, 100%, 61%);
+}
+.device-app-demo{
+    background-color:white;
+    color:blue;
+    width: 100%;
+    height:100%;
+}

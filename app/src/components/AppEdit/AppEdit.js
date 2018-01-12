@@ -1,6 +1,9 @@
 import React from 'react';
 import Aux from '../../HOC/aux/aux'
-import "/Users/gan/Desktop/AIflow/app/node_modules/html5-device-mockups/dist/device-mockups.min.css"
+import './AppEdit.css';
+import "/Users/gan/Desktop/AIflow/app/node_modules/html5-device-mockups/dist/device-mockups.min.css";
+import AppEditSpace from './AppEditSpace/AppEditSpace';
+
 
 const AppEdit = () => {
     return (
@@ -44,12 +47,14 @@ const AppEdit = () => {
                 </div>
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <div className="columns is-vcentered">
-                            <div className="column is-6">
+                        <div className="columns">
+                            <div className="column is-6 is-vcentered">
                                 <div className="device-wrapper container">
                                     <div className="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
                                         <div className="screen">
-
+                                            <h1 className="device-app-demo">
+                                                The app will go here
+                                            </h1>
                                         </div>
                                         {/* <div className="button">
 
@@ -58,37 +63,37 @@ const AppEdit = () => {
                                 </div>
                             </div>
                             <div className="column is-6">
-                                <div className="center-image">
-                                    <figure className="image is-128x128">
-                                        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" />
-                                    </figure>
+                                <div className="columns">
+                                    <div className="column is-3">
+                                        <h1 className="title is-2">
+                                            <i class="fa fa-plus-square fa-2x AppEdit-add-item" aria-hidden="true"></i>
+                                        </h1>
+                                    </div>
+                                    <div className="column is-3">
+                                        <h1 className="title is-2">
+                                            <i class="fa fa-text-width fa-2x AppEdit-add-text" aria-hidden="true"></i>
+                                        </h1>
+                                    </div>
+                                    <div className="column is-3">
+                                        <h1 className="title is-2">
+                                            <i class="fa fa-camera-retro fa-2x AppEdit-add-image" aria-hidden="true"></i>
+                                        </h1>
+                                    </div>
+                                    <div className="column is-3">
+                                        <h1 className="title is-2">
+                                            <i class="fa fa-link fa-2x AppEdit-link-page" aria-hidden="true"></i>
+                                        </h1>
+                                    </div>
                                 </div>
-                                <h1 className="title is-2">
-                                    <i class="fa fa-plus-square fa-2x" aria-hidden="true"></i>
-                                </h1>
-                                <h1 className="title is-2">
-                                    <i class="fa fa-text-width" aria-hidden="true"></i>
-                                </h1>
-                                <h1 className="title is-2">
-                                    <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                                </h1>
-                                <h1 className="title is-2">
-                                    <i class="fa fa-link" aria-hidden="true"></i>
-                                </h1>
+                                <div className="columns">
+                                    <div className="column is-12">
+                                        <AppEditSpace />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="hero-foot">
-                <div className="container">
-                    <div className="tabs is-centered">
-                        <ul>
-                            <li><a>And this at the bottom</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> */}
             </section>
         </Aux>
 

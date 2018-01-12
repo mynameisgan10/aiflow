@@ -1,0 +1,8 @@
+.AppEditImage-border{
+    border:2px dashed lightgrey;
+}
+
+.AppEditImage-preview-image{
+    display:inline-block;
+    margin:0 auto;
+}
