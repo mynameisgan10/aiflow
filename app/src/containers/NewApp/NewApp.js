@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Aux from "../../HOC/aux/aux";
 import "./NewApp.css";
 import Chat from '../../components/Chat/Chat';
+import AppEdit from '../../components/AppEdit/AppEdit';
 
 class NewApp extends Component {
 
@@ -37,13 +38,23 @@ class NewApp extends Component {
         });
         updateState.questions[index].response = response.value;
         this.setState(updateState);
-        console.log(this.state);
         response.value = '';
     }
     render() {
+        let page = 1;
+        let currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
+        this.state.questions.map((question) => {
+            if(question.response === null){
+                page = 2;
+                currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
+            }else{
+                page = 1;
+                currentPage = <AppEdit/>
+            }
+        })
         return (
             <Aux>
-                <Chat questions={this.state.questions} submit={this.userRespond} />
+                {currentPage}
             </Aux >
 
         );
