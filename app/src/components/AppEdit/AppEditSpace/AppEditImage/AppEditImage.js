@@ -16,21 +16,24 @@ const AppEditImage = () => {
             </div>
             <div className="columns">
                 <div className="column is-12 AppEditImage-border">
-                    <div className="field">
-                        <div className="file is-centered is-boxed is-success has-name">
-                            <label className="file-label">
-                                <input className="file-input" type="file" name="resume" />
-                                <span className="file-cta">
-                                    <span className="file-icon">
-                                        <i className="fa fa-upload"></i>
+                    <div className="AppEditImage-dropArea">
+                        <h2 className="subtitle is-4 AppEditImage-dropText">
+                            Drag and drop your images here
+                    </h2>
+                        <h2 className="subtitle is-4">
+                            or
+                    </h2>
+                        <div class="file is-primary is-centered">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume" />
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fa fa-upload"></i>
                                     </span>
-                                    <span className="file-label">
-                                        Centered file…
-                  </span>
+                                    <span class="file-label">
+                                        Choose a file…
+      </span>
                                 </span>
-                                <span className="file-name">
-                                    Screen Shot 2017-07-29 at 15.54.25.png
-                </span>
                             </label>
                         </div>
                     </div>

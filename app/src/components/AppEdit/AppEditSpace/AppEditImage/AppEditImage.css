@@ -1,8 +1,15 @@
 .AppEditImage-border{
-    border:2px dashed lightgrey;
+    border:4px dashed lightgrey;
+    min-height:320px;
 }
 
 .AppEditImage-preview-image{
     display:inline-block;
-    margin:0 auto;
+}
+.AppEditImage-dropArea{
+    background-color:lightgrey;
+    height:100%;
+}
+.AppEditImage-dropText{
+    padding-top:50px;
 }

@@ -1,4 +1,4 @@
-.AppEdit-add-item {
+.AppEdit-devices{
     color:hsl(217, 71%, 53%)
 }
 .AppEdit-add-text {
@@ -15,4 +15,8 @@
     color:blue;
     width: 100%;
     height:100%;
+}
+.AppEdit-selected-background{
+    background-color:lightgrey;
+    border-radius:20px;
 }
