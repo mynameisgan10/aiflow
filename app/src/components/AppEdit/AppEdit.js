@@ -9,7 +9,7 @@ class AppEdit extends Component {
     state = {
         AppEditSpace: 'text'
     }
-    toggleAppEditSpace(areaName) {
+    toggleAppEditSpace = (areaName) => {
         this.setState({
             AppEditSpace: areaName
         })
@@ -108,7 +108,7 @@ class AppEdit extends Component {
                                 </div>
                                 <div className="columns">
                                     <div className="column is-12">
-                                        <button class="button is-success is-outlined is-pulled-right">All done?</button>
+                                        <button class="button is-success is-outlined is-pulled-right" onClick={this.props.completeSetup}>All done?</button>
                                     </div>
                                 </div>
                             </div>

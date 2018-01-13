@@ -3,6 +3,7 @@ import Aux from "../../HOC/aux/aux";
 import "./NewApp.css";
 import Chat from '../../components/Chat/Chat';
 import AppEdit from '../../components/AppEdit/AppEdit';
+import Rendering from '../../UI/rendering/Rendering';
 
 class NewApp extends Component {
 
@@ -23,9 +24,10 @@ class NewApp extends Component {
                 question: "Do you need a delivery service",
                 response: null
             }
-        ]
+        ],
+        page: 1
     }
-    userRespond = (event,response, index) => {
+    userRespond = (event, response, index) => {
         event.preventDefault();
         let updateState = { ...this.state };
         updateState = {
@@ -40,18 +42,46 @@ class NewApp extends Component {
         this.setState(updateState);
         response.value = '';
     }
+    togglePage = (number) => {
+        let currentPage = <AppEdit />;
+        switch (number) {
+            case 1:
+                currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
+                break;
+            case 2:
+                currentPage = <AppEdit completeSetup={this.completeSetup} />
+                break;
+            case 3:
+                currentPage = <Rendering />
+                break;
+            default:
+                currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
+                break;
+        }
+        return currentPage;
+
+    }
+    completeSetup = () => {
+        console.log("done!");
+        this.setState({
+            page: 3
+        });
+    }
     render() {
-        let page = 1;
+        let page = this.state.page;
         let currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
         this.state.questions.map((question) => {
-            if(question.response === null){
+            if (question.response === null) {
+                page = 1; //use page 3 to get loading
+
+            } else if (this.state.page === 3) {
+                page = 3;
+            }
+            else {
                 page = 2;
-                currentPage = <Chat questions={this.state.questions} submit={this.userRespond} />
-            }else{
-                page = 1;
-                currentPage = <AppEdit/>
             }
         })
+        currentPage = this.togglePage(page);
         return (
             <Aux>
                 {currentPage}
