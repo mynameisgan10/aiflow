@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
-import PropTypes from 'prop-types';
+import './Navbar.css';
+
 
 const Navbar = props => {
     return (
@@ -11,7 +12,7 @@ const Navbar = props => {
                         <div className="level-left">
                             <div className="level-item">
                                 <p className="subtitle is-5">
-                                    <Link to='/'><strong className="has-text-danger">AIFlow</strong></Link>
+                                    <Link to='/'><strong className="has-text-danger">Sayocode</strong></Link>
                                 </p>
                             </div>
                             <div className="level-item">
@@ -32,7 +33,7 @@ const Navbar = props => {
                             <p className="level-item"><NavLink to="/published" exact activeClassName="has-text-weight-bold">Published</NavLink></p>
                             <p className="level-item"><NavLink to="/drafts" exact activeClassName="has-text-weight-bold">Drafts</NavLink></p>
                             <p className="level-item"><NavLink to="/deleted" exact activeClassName="has-text-weight-bold">Deleted</NavLink></p>
-                            <p className="level-item"><NavLink to="/new" exact activeClassName="has-text-weight-bold"><p className="button is-success">New</p></NavLink></p>
+                            <p className="level-item"><NavLink to="/new" exact activeClassName="has-text-weight-bold"><p className="button is-purple">New</p></NavLink></p>
                         </div>
                     </nav>
                 </div>
